@@ -1,7 +1,7 @@
 import torch
 from transformers import pytorch_utils
 
-# patch pytorch to fix device="mps" issues
+# BEGIN patch pytorch to fix device="mps" issues
 def patched_isin_mps_friendly(elements, test_elements):
     if test_elements.ndim == 0:
         test_elements = test_elements.unsqueeze(0)
