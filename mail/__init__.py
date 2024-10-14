@@ -11,7 +11,7 @@ def get_html_text(html):
 class GmailMboxMessage():
     def __init__(self, email_data):
         if not isinstance(email_data, email.message.EmailMessage):
-            raise TypeError('Variable must be type mailbox.mboxMessage, not <{0}>'.format(type(email_data)))
+            raise TypeError('Variable must be type email.message.EmailMessage, not <{0}>'.format(type(email_data)))
 
         self.date = email_data.get('Date')
         self.sent_from = email_data.get('From')
