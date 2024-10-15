@@ -37,7 +37,6 @@ class GmailMboxMessage():
 
 class MboxReader:
     def __init__(self, filename):
-        print("opening <{0}>".format(filename))
         self.handle = open(filename, 'rb')
         assert self.handle.readline().startswith(b'From ')
 

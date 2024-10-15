@@ -6,3 +6,16 @@ to grow and deserved being managed in a repo.
 Don't expect anything particularly dependable here, this is just me toying 
 around. If you end up looking at this repo, it's probably more that I'm needing help from you rather than the other way round...
 
+## Hugging Face NLP examples
+
+To run sample 8, for example, use:
+```
+python . nlpt 8
+```
+
+## GMail export parsing example
+
+_(WIP)_ reading a gmail export (in .MBOX format). The file must be at `~/Downloads/Takeout/all-mails.mbox`.
+```
+python . mail
+```
