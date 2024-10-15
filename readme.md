@@ -6,6 +6,15 @@ to grow and deserved being managed in a repo.
 Don't expect anything particularly dependable here, this is just me toying 
 around. If you end up looking at this repo, it's probably more that I'm needing help from you rather than the other way round...
 
+## Setup
+
+This project uses conda to manage its dependencies
+
+```
+conda env create -f ai-play-conda.yml
+conda activate ai-play
+```
+
 ## Hugging Face NLP examples
 
 To run sample 8, for example, use:
