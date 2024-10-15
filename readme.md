@@ -1,6 +1,6 @@
 # Jérôme plays with AI ideas
 
-This repo started with me trying out the [Hugging Face NLP course](https://huggingface.co/learn/nlp-course/chapter1/3). As always, things quickly started
+This repo started with me trying out the [Hugging Face NLP course](https://huggingface.co/learn/nlp-course). As always, things quickly started
 to grow and deserved being managed in a repo.
 
 Don't expect anything particularly dependable here, this is just me toying 
