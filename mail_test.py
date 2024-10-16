@@ -1,10 +1,8 @@
 import os
-# import shutil
 from pathlib import Path
-from mail import MboxReader, GmailMboxMessage
+from cmn_mail import MboxReader, GmailMboxMessage
 
 def run():
-    # shutil.rmtree("output")
     Path("output").mkdir(exist_ok=True)
 
     f = open("output/test2.txt", "w")

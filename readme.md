@@ -17,6 +17,16 @@ conda activate ai-play
 
 note: to update yml, run `conda env export >ai-play-conda.yml`
 
+## GMail export classification
+
+To kick off this experiment, a summary is generated for each mail. This will process a maximum 
+of 100 mails for now, as that's enough to already see problems appear...
+```
+python . mcls
+```
+The mails are expected at `~/Downloads/Takeout/all-mails.mbox`.
+
+
 ## Hugging Face NLP examples
 
 To run sample 8, for example, use:
@@ -26,7 +36,8 @@ python . nlpt 8
 
 ## GMail export parsing example
 
-_(WIP)_ reading a gmail export (in .MBOX format). The file must be at `~/Downloads/Takeout/all-mails.mbox`.
+reading a gmail export (in .MBOX format). The file must be at `~/Downloads/Takeout/all-mails.mbox`.
 ```
-python . mail
+python . mtst
 ```
+

@@ -13,7 +13,9 @@ class GmailMboxMessage():
         if not isinstance(email_data, email.message.EmailMessage):
             raise TypeError('Variable must be type email.message.EmailMessage, not <{0}>'.format(type(email_data)))
 
-        self.date = email_data.get('Date')
+        self.raw = email_data
+        self.id = email_data.get("Message-ID")
+        self.date = email.utils.parsedate_to_datetime( email_data.get('Date') )
         self.sent_from = email_data.get('From')
         self.sent_to = email_data.get('To')
         self.subject = email_data.get('Subject')
