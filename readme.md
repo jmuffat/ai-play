@@ -15,6 +15,8 @@ conda env create -f ai-play-conda.yml
 conda activate ai-play
 ```
 
+note: to update yml, run `conda env export >ai-play-conda.yml`
+
 ## Hugging Face NLP examples
 
 To run sample 8, for example, use:
