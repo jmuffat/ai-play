@@ -36,7 +36,11 @@ python . nlpt 8
 
 ## GMail export parsing example
 
-reading a gmail export (in .MBOX format). The file must be at `~/Downloads/Takeout/all-mails.mbox`.
+ (WIP) Reads a gmail export (in .MBOX format), and builds a [DuckDB](https://duckdb.org) database 
+indexing addresses and labels.
+
+The file must be at `~/Downloads/Takeout/all-mails.mbox`.
+
 ```
 python . mtst
 ```

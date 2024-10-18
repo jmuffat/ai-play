@@ -2,10 +2,11 @@ import email
 from email.policy import default
 import bs4
 
-def get_html_text(html):
+def get_html_text(data):
     try:
+        html = data.get_content()
         return bs4.BeautifulSoup(html, 'lxml').body.get_text(' ', strip=True)
-    except AttributeError: # message contents empty
+    except: #AttributeError: # message contents empty
         return None
 
 class GmailMboxMessage():
@@ -28,7 +29,7 @@ class GmailMboxMessage():
             if content_type=="text/plain":
                 text = body.get_content()
             elif content_type=="text/html":
-                text = get_html_text(body.get_content())
+                text = get_html_text(body)
             else:
                 text = body.get_content()
         

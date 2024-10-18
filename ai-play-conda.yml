@@ -95,6 +95,7 @@ dependencies:
   - pysocks=1.7.1=py312hca03da5_0
   - python=3.12.2=hdf0ec26_0_cpython
   - python-dateutil=2.9.0post0=py312hca03da5_2
+  - python-duckdb=1.1.2=py312hf02c72a_0
   - python-tzdata=2023.3=pyhd3eb1b0_0
   - python-xxhash=2.0.2=py312h80987f9_1
   - python_abi=3.12=5_cp312

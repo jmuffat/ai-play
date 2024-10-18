@@ -2,9 +2,9 @@ import os
 import shutil
 import re
 import textwrap
+
 from pathlib import Path
 from transformers import pipeline
-
 
 from cmn_mail import MboxReader, GmailMboxMessage
 

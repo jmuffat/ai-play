@@ -1,29 +1,27 @@
 import os
 from pathlib import Path
-from cmn_mail import MboxReader, GmailMboxMessage
+import duckdb
+
+from cmn_mail import MboxReader
+from cmn_maildb import initdb,save_message
 
 def run():
     Path("output").mkdir(exist_ok=True)
 
-    f = open("output/test2.txt", "w")
+    db = duckdb.connect("output/test-maildb.db")
+    initdb(db)
 
     mboxPath = os.path.expanduser("~/Downloads/Takeout/all-mails.mbox")
 
     i = 0
     with MboxReader(mboxPath) as mbox:
         for message in mbox:
-            email = GmailMboxMessage(message)
-            print('-=-=-=- Parsing email {0} -=-=-=-'.format(i))
-
-            print('-=-=-=- Parsing email {0} -=-=-=-'.format(i), file=f)
-            print(email.subject, file=f)
-            print(email.labels, file=f)
-            print(email.text, file=f)
-            print("", file=f)
+            if i%100 == 0: print('-=-=-=- Parsing email {0} -=-=-=-'.format(i))
+            save_message(db,message)
 
             i=i+1
-            if i>=10: break 
+            # if i>=100: break 
 
+    db.close()
 
-    f.close()
     print("done.")
